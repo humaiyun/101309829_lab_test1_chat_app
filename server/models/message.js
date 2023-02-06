@@ -8,7 +8,8 @@ const message = new mongoose.Schema({
     room: {
         type: String,
         trim: true,
-        maxLength: 50
+        maxLength: 50,
+        default: "main"
     },
     message: {
         type: String
