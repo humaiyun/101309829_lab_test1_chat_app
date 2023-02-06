@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Chat App | Lab Test 1</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Don't have an account? Sign up here.</h1>
+    <form id="signupForm" method="post">
+        <div id="signup-status">
+
+        </div>
+        <input type="text" id="username" placeholder="Username"><br /><br />
+        <input type="text" id="firstname" placeholder="First Name"><br /><br />
+        <input type="text" id="lastname" placeholder="Last Name"><br /><br />
+        <input type="text" id="password" placeholder="Password"><br /><br />
+        <button type="submit" id="signup-submit">Sign Up</button>
+    </form>
+    <h1>Login if you have an account</h1>
+    <form id="loginForm" method="post">
+        <div id="loginStatus">
+
+        </div>
+        <input type="text" id="usernameLogin" placeholder="Username"><br /><br />
+        <input type="text" id="passwordLogin" placeholder="Password"><br /><br />
+        <button type="submit" id="login-submit">Login</button>
+    </form>
+
+    <br />
+    <div id="signed-in-banner"></div>
+
+
+    <br /><br />
+    <h1>Message Room</h1>
+    <form id="sendForm">
+        <label for="username-message-box">Username</label>
+        <input type="text" disabled id="username-message-box" /><br /><br />
+        <input type="text" disabled id="username-message-box" placeholder="Main Chat Room" /><br /><br />
+        <input type="text" placeholder="Enter message" id="message-input" />
+        <button type="submit" id="login-submit">Send</button>
+    </form>
+    <div id="msg-container"></div>
+
+<script>
+    /* var socket = io();
+    socket.on("connect", () => {
+         console.log(socket.id); 
+     });
+    
+    
+    async function signUpClick(e) {
+        e.preventDefault();
+        const signupForm = document.forms.signupForm;
+        const formData = new FormData(signupForm);
+        let obj = {};
+        formData.forEach((value, key) => object[key] = value);
+
+        console.log("obj", obj);
+
+        await fetch("http://localhost:5000/api/v1/user/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(obj),
+        })
+    }
+
+    document.getElementById("signup-submit").onclick = () => signUpClick(); */
+</script>
+</body>
+</html>
