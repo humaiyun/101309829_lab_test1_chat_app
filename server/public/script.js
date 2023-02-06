@@ -15,13 +15,14 @@ const getAllMessages = async () => {
     .then(data => {
         allMessages = data;
     })
-    .then(() => console.log(allMessages));
+    .then(() => console.log(allMessages))
+    .then(() => allMessages.map(msg => {
+        messageDiv.innerHTML += `<h3>${msg.from_user}</h3><p>${msg.message}</p>`
+    }));
 }
 getAllMessages();
 
-allMessages.forEach(msg => {
-    messageDiv.append("<h1>Hello</h1>")
-})
+
 
 // allMessages.map(msg => {
 //     messageDiv.append(`<div>
